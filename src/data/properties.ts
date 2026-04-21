@@ -1,0 +1,57 @@
+export const properties = [
+    {
+        image: "/images/Casa moderna.png",
+        price: "R$ 4.500.000",
+        title: "Residência de Alto Padrão com vista",
+         location: "Jardim Europa, SP",
+        bedrooms: 4,
+        bathrooms: 3,
+        parking: 2,
+    },
+    {
+        image: "/images/Apartamento Luxo.png",
+        price: "R$ 2.800.000",
+        title: "Apartamento decorado e mobiliado",
+         location: "Itaim Bibi, SP",
+        bedrooms: 3,
+        bathrooms: 4,
+        parking: 3,
+    },
+    {
+        image: "/images/Cobertura Duplex.png",
+        price: "R$ 8.900.000",
+        title: "Cobertura Duplex com Piscina PrivativaPrivativaPrivativaPrivativaPrivativa",  
+         location: "Vila Nova Conceição, SP",  
+        bedrooms: 4,
+        bathrooms: 6,
+        parking: 5,
+    },{
+        image: "/images/Casa moderna.png",
+        price: "R$ 4.500.000",
+        title: "Residência de Alto Padrão com vista",
+         location: "Jardim Europa, SP",
+        bedrooms: 4,
+        bathrooms: 3,
+        parking: 2,
+    },
+    {
+        image: "/images/Apartamento Luxo.png",
+        price: "R$ 2.800.000",
+        title: "Apartamento decorado e mobiliado",
+         location: "Itaim Bibi, SP",
+        bedrooms: 3,
+        bathrooms: 4,
+        parking: 3,
+    },
+    {
+        image: "/images/Cobertura Duplex.png",
+        price: "R$ 8.900.000",
+        title: "Cobertura Duplex com Piscina Privativa",  
+         location: "Vila Nova Conceição, SP",  
+        bedrooms: 4,
+        bathrooms: 6,
+        parking: 5,
+    },
+    
+    // adiciona mais aqui
+];
