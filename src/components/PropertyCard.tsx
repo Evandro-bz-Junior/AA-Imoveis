@@ -23,9 +23,9 @@ export default function PropertyCard({
     link = "#"
 }: PropertyCardProps) {
     return (
-        <div className="card w-[400] h-full bg-background rounded-2xl overflow-hidden shadow-md">
+        <div className="card w-full lg:w-[400] h-full bg-background rounded-2xl overflow-hidden shadow-md">
             <div className="imageArea relative">
-                <Image src={image} alt={title} width={400} height={300} />
+                <Image src={image} alt={title} width={400} height={300} className="w-full h-full object-cover" />
                 <div className="absolute bottom-3 left-3 flex items-center gap-1 bg-black/40 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full">
                     <img src="/images/MapPin.svg" alt="Localização" className="w-3 h-3" />
                     <span>{location}</span>

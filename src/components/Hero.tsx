@@ -3,13 +3,13 @@ import Image from "next/image";
 export default function Hero() {
     return (
         <section id="home" className="w-full  flex items-center py-14 ">
-            <div className="container flex   justify-center mx-auto px-4 gap-10">
+            <div className="container flex flex-col md:flex-row   justify-center mx-auto px-4 gap-10">
 
-                <div className="w-[580] flex flex-col   justify-center gap-6 mb-6">
-                    <h1 className="text-6xl  font-medium ">
-                        Encontre o lar que combina com a sua próxima <span className="text-accent italic">conquista</span>
+                <div className="md:w-[480] lg:w-[580] flex flex-col   justify-center gap-6 mb-6">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl  font-medium ">
+                        Encontre o lar que combina com a sua próxima <span className="text-text3 italic">conquista</span>
                     </h1>
-                    <span className="w-[450]">Imóveis selecionados com curadoria estratégica e
+                    <span className="md:w-[450]">Imóveis selecionados com curadoria estratégica e
                         atendimento personalizado do início ao fim da negociação.
                     </span>
                     <div className="links-area w-full flex gap-4  ">
@@ -31,14 +31,15 @@ export default function Hero() {
                         </a>
                     </div>
                 </div>
-
-                <div className=" rounded-2xl overflow-hidden max-h-[550] shadow-md">
-                    <Image
-                        src="/images/heroImage.png" alt="hero image"
-                        width={480} height={550}
-                    />
+                <div className="flex  md:items-center">
+                    <div className=" rounded-2xl overflow-hidden md:max-h-[350] lg:max-h-[450] xl:max-h-[550] shadow-md">
+                        <Image
+                            src="/images/heroImage.png" alt="hero image"
+                            width={480} height={550}
+                            className=" object-cover"
+                        />
+                    </div>
                 </div>
-
             </div>
         </section>
     );

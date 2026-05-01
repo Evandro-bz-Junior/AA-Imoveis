@@ -5,7 +5,7 @@ export default function Contact() {
     return (
         <section className='bg-section2 w-full flex items-center py-14  '>
             <div className='container flex flex-col items-center mx-auto px-4 gap-4'>
-                <h2 className=' font-serif font-medium text-center mb-6 text-text1 w-lg'>Estou à disposição para entender suas necessidades e apresentar as propriedades mais adequadas ao seu perfil.</h2>
+                <h2 className=' font-serif font-medium text-center mb-6 text-text1 md:w-lg'>Estou à disposição para entender suas necessidades e apresentar as propriedades mais adequadas ao seu perfil.</h2>
                 <a className="px-4 bg-background text-text2 py-2 rounded-xl text-center border  hover:bg-primary hover:text-text1 hover:scale-105 transition-colors duration-300"
                     href="https://wa.me/5584999999999"
                     target="_blank"

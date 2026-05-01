@@ -3,18 +3,18 @@ import React from 'react';
 
 export default function About() {
     return (
-        <section id="about" className="w-full  flex flex-col items-center py-14 ">
-            <div className="container flex justify-center mx-auto px-4 gap-6 w-4xl">
-                <div className='img-area relative px-20'>
+        <section id="about" className="w-full  flex flex-col items-center py-10 ">
+            <div className="container flex flex-col md:flex-row justify-center mx-auto px-8 gap-6 md:gap-2 lg:w-4xl">
+                <div className='img-area relative px-20 h-full  w-fit'>
                     <div className="absolute -bottom-5 right-5 w-28 h-28 bg-[#EAE8DB] rounded-full -z-10"></div>
                     <img src="/images/Corretor.png" alt="Imagem corretor"
                         className='relative z-10 w-80 h-auto rounded-2xl shadow-xl' />
                 </div>
 
-                <div className="infoArea flex flex-col w-1/2  justify-center gap-6 ">
+                <div className="infoArea flex flex-col md:w-1/2  justify-center gap-6 ">
                     <h4 className='text-2xl font-serif font-medium leading-[1.1]'>Atendimento direto com quem
-                        <span className='text-accent italic '> entende do mercado</span></h4>
-                    <p className='text-text2 font-light'>Especialista no mercado imobiliário, Meu foco é garantir que você faça o melhor negócio, seja comprando a casa dos seus sonhos ou vendendo seu imóvel com máxima rentabilidade.</p>
+                        <span className='text-text3 italic '> entende do mercado</span></h4>
+                    <p className='  font-light'>Especialista no mercado imobiliário, Meu foco é garantir que você faça o melhor negócio, seja comprando a casa dos seus sonhos ou vendendo seu imóvel com máxima rentabilidade.</p>
 
 
                     <div className=" flex flex-col gap-3">
@@ -67,13 +67,13 @@ export default function About() {
 
                 </div>
             </div>
-            <div className="container flex flex-col justify-center items-center mx-auto px-4 gap-12 w-4xl py-14">
+            <div className="container flex flex-col justify-center items-center mx-auto px-4 gap-12 md:w-4xl py-14">
                 <div className='flex flex-col justify-center items-center gap-4 text-center'>
                     <h4 className='text-2xl font-medium w-96'>Por que escolher meu atendimento?</h4>
-                    <span className='text-text2 w-lg'>Uma abordagem consultiva que prioriza os seus interesses em cada etapa da jornada imobiliária.</span>
+                    <span className='text-text2 w-xs md:w-lg'>Uma abordagem consultiva que prioriza os seus interesses em cada etapa da jornada imobiliária.</span>
                 </div>
-                <div className="cards-area flex gap-8 ">
-                    <div className="card w-96 h-64 flex flex-col items-center gap-8 p-8 rounded-xl shadow-lg">
+                <div className="cards-area flex flex-col md:flex-row items-center gap-8 ">
+                    <div className="card  xl:w-96 lg:h-80 xl:h-64   flex flex-col items-center gap-8 p-8 rounded-xl shadow-lg">
                         <div className="shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-[#EAE8DB] shadow-lg">
                             <Image
                                 src="/images/Vector-star.png"
@@ -89,7 +89,7 @@ export default function About() {
                         </div>
                     </div>
 
-                    <div className="card w-96 h-64 flex flex-col items-center gap-8 p-8 rounded-xl shadow-lg">
+                    <div className="card  xl:w-96 lg:h-80 xl:h-64   flex flex-col items-center gap-8 p-8 rounded-xl shadow-lg">
                         <div className="shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-[#EAE8DB] shadow-lg">
                             <Image
                                 src="/images/vetor$.png"
@@ -104,7 +104,7 @@ export default function About() {
                         </div>
                     </div>
 
-                    <div className="card w-96 h-64 flex flex-col items-center gap-8 p-8 rounded-xl shadow-lg">
+                    <div className="card  xl:w-96 lg:h-80 xl:h-64   flex flex-col items-center gap-8 p-8 rounded-xl shadow-lg">
                         <div className="shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-[#EAE8DB] shadow-lg">
                             <Image
                                 src="/images/Vector-shield.png"
