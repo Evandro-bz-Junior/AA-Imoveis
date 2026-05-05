@@ -1,7 +1,15 @@
+"use client";
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 export default function Footer() {
+      const pathname = usePathname();
+    
+        // Se a URL começar com /admin ou /login, não renderiza o Header
+        if (pathname.startsWith("/dashboard") || pathname === "/login") {
+            return null;
+        }
     return (
         <footer className='bg-background text-text2 container flex flex-col justify-center mx-auto gap-8 py-6 px-8 md:px-14 mb-10 text-xs '>
             <div className='flex flex-col md:flex-row gap-6 justify-center md:justify-between  '>

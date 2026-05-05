@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
+ 
 
 import { properties } from "@/data/properties";
 import PropertyCard from "@/components/PropertyCard";
@@ -7,7 +6,7 @@ import PropertyCard from "@/components/PropertyCard";
 
 export default function Propertys() {
     return (
-        <section id="imoveis" className="w-full  flex  items-center py-14 bg-section1">
+        <section id="propertys" className="w-full  flex  items-center py-14 bg-section1">
             <div className="container flex flex-col   justify-center    mx-auto px-4 gap-8">
 
                 <div className="infoArea flex flex-col   justify-center gap-4 mb-6 px-4">

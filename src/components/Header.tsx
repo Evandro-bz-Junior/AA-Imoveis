@@ -1,9 +1,18 @@
+"use client";
 import Image from "next/image";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+    const pathname = usePathname();
+
+    // Se a URL começar com /admin ou /login, não renderiza o Header
+    if (pathname.startsWith("/dashboard") || pathname === "/login") {
+        return null;
+    }
+
     return (
         <header
             aria-label="Menu principal"
@@ -21,16 +30,16 @@ export default function Header() {
                 <nav className="hidden md:flex items-center gap-6" >
                     <ul className="flex items-center gap-6">
                         <li>
-                            <a href="#" className="hover:underline text-text2">Home</a>
+                            <Link href="/" className="text-text2">Home</Link>
                         </li>
                         <li>
-                            <a href="#" className="hover:underline text-text2">Imoveis</a>
+                            <Link href="#propertys" className="text-text2">Imoveis</Link>
                         </li>
                         <li>
-                            <a href="#" className="hover:underline text-text2">Sobre</a>
+                            <Link href="#about" className="text-text2">Sobre</Link>
                         </li>
                         <li>
-                            <a href="#" className="hover:underline text-text2">Contato</a>
+                            <Link href="#contact" className="text-text2">Contato</Link>
                         </li>
                     </ul>
                 </nav>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface PropertyCardProps {
+    id: number | string;
     image: string;
     price: string;
     title: string;
@@ -13,6 +14,7 @@ interface PropertyCardProps {
 }
 
 export default function PropertyCard({
+    id,
     image,
     price,
     title,
@@ -58,7 +60,9 @@ export default function PropertyCard({
                             <span className="text-sm text-text2">{parking} </span>
                         </div>
                     </div>
-                    <Link href={link}>Ver detalhes</Link>
+                    <Link href={`/propertys/${id}`} className="hover:text-text3 transition-colors">
+                        Ver detalhes
+                    </Link>
                 </div>
             </div>
         </div>
