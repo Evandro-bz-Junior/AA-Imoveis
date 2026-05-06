@@ -2,13 +2,13 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
-import Propertys from "@/components/Propertys";
+import Properties from "@/components/Properties";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Propertys />
+      <Properties />
       <About />
       <Contact />
     </main>

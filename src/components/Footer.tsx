@@ -7,7 +7,7 @@ export default function Footer() {
       const pathname = usePathname();
     
         // Se a URL começar com /admin ou /login, não renderiza o Header
-        if (pathname.startsWith("/dashboard") || pathname === "/login") {
+        if (pathname.startsWith("/admin") || pathname === "/login") {
             return null;
         }
     return (

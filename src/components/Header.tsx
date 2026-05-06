@@ -9,7 +9,7 @@ export default function Header() {
     const pathname = usePathname();
 
     // Se a URL começar com /admin ou /login, não renderiza o Header
-    if (pathname.startsWith("/dashboard") || pathname === "/login") {
+    if (pathname.startsWith("/admin") || pathname === "/login") {
         return null;
     }
 
@@ -33,7 +33,7 @@ export default function Header() {
                             <Link href="/" className="text-text2">Home</Link>
                         </li>
                         <li>
-                            <Link href="#propertys" className="text-text2">Imoveis</Link>
+                            <Link href="#properties" className="text-text2">Imoveis</Link>
                         </li>
                         <li>
                             <Link href="#about" className="text-text2">Sobre</Link>

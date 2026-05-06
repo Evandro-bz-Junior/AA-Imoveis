@@ -1,36 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Property } from "@/types/property"
 
-interface PropertyCardProps {
-    id: number | string;
-    image: string;
-    price: string;
-    title: string;
-    location: string;
-    bedrooms: number;
-    bathrooms: number;
-    parking: number;
-    link?: string;
+
+type PropertyCardProps = {
+  property: Property
 }
 
-export default function PropertyCard({
+export default function PropertyCard({ property }: PropertyCardProps){
+      const {
     id,
-    image,
-    price,
     title,
-    location,
+    price,
+    city,
+    state,
+    neighborhood,
     bedrooms,
     bathrooms,
     parking,
-    link = "#"
-}: PropertyCardProps) {
+    images
+  } = property
+  
     return (
         <div className="card w-full lg:w-[400] h-full bg-background rounded-2xl overflow-hidden shadow-md">
             <div className="imageArea relative">
-                <Image src={image} alt={title} width={400} height={300} className="w-full h-full object-cover" />
+                <Image src={images[0]} alt={title} width={400} height={300} className="w-full h-full object-cover" />
                 <div className="absolute bottom-3 left-3 flex items-center gap-1 bg-black/40 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full">
                     <img src="/images/MapPin.svg" alt="Localização" className="w-3 h-3" />
-                    <span>{location}</span>
+                    <span>{neighborhood}, {city}, {state}</span>
                 </div>
             </div>
             <div className="infoArea p-6 flex flex-col justify-between gap-4 h-[200]">

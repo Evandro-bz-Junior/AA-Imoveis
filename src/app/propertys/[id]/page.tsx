@@ -1,23 +1,30 @@
-import { properties } from "@/data/properties";
+import { getProperties } from "@/lib/api";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 
-export default async function DetalhesImovel({ params }: { params: Promise<{ id: string }> }) {
+export default async function DetalhesImovel({
+    params,
+}: {
+    params: Promise<{ id: string }>;
+}) {
     const { id } = await params;
 
-    const property = properties.find((item) => item.id === Number(id));
+    const properties = await getProperties();
+
+    const property = properties.find(
+        (item) => item.id.toString() === id
+    );
 
     if (!property) {
         notFound();
     }
-
     return (
         <main className="container mx-auto py-20 px-4 md:px-6">
             <div className="grid grid-cols-1 md:grid-cols-2  gap-6">
 
                 <div className="relative h-75 md:h-100   rounded-2xl overflow-hidden shadow-lg">
                     <Image
-                        src={property.image}
+                        src={property.images[0]}
                         alt={property.title}
                         fill
                         className="object-cover"
@@ -28,7 +35,7 @@ export default async function DetalhesImovel({ params }: { params: Promise<{ id:
                 <div className="flex flex-col gap-6  w-full">
                     <div className="  w-full">
                         <h1 className="text-4xl font-bold text-text2 md:w-full">{property.title}</h1>
-                        <span className="text-primary font-bold text-sm uppercase tracking-wider ">{property.location}</span>
+                        <span className="text-primary font-bold text-sm uppercase tracking-wider ">{property.neighborhood}, {property.city}, {property.state}</span>
                     </div>
 
                     <p className="text-3xl font-medium text-text2">{property.price}</p>
