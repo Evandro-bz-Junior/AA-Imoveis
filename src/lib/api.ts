@@ -1,7 +1,6 @@
 import { properties } from "@/data/properties"
 
 export async function getProperties() {
-    console.log("PROPERTIES:", properties);
     return properties
 }
 
