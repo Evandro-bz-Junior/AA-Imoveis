@@ -40,16 +40,16 @@ export default function Footer() {
                     <div className='adress flex flex-col w-64  gap-4 mt-2'>
                         <h6 className='font-semibold'>Contato</h6>
                         <div className='flex flex-col gap-4 '>
-                            <span>Local de atendimento: Rua Duodécimo Rosado, Doze Anos, Mossoró - RN, 59603-020.</span>
+                            <span>Local de atendimento:<br /> Rua Duodécimo Rosado, Doze Anos, Mossoró - RN, 59603-020.</span>
                             <span>Telefone: (84) 99999-9999</span>
                             <span>Email: 5TtQ8@example.com</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="border-t border-white/10 py-4 px-6 md:px-12">
+            <div className="border-t border-white/10 py-4 px-6 md:px-12 text-end">
                 <span className="text-gray-500 italic text-[11px]">
-                    © 2026 Almeida & Co. Todos os direitos reservados.
+                    © 2026 AA. Todos os direitos reservados.
                 </span>
             </div>
         </footer>
