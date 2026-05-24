@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import React from 'react';
+import Image from 'next/image'; 
 
 export default function About() {
     return (
@@ -67,7 +66,7 @@ export default function About() {
 
                 </div>
             </div>
-            <div className="container flex flex-col justify-center items-center mx-auto px-4 gap-12 md:w-4xl py-14">
+            <div className="container flex flex-col justify-center items-center mx-auto px-4 gap-12  py-14">
                 <div className='flex flex-col justify-center items-center gap-4 text-center'>
                     <h4 className='text-2xl font-medium w-96'>Por que escolher meu atendimento?</h4>
                     <span className='text-text2 w-xs md:w-lg'>Uma abordagem consultiva que prioriza os seus interesses em cada etapa da jornada imobiliária.</span>

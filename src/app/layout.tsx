@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display, Geist } from "next/font/google"
+// @ts-ignore: allow importing global CSS without type declarations
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,11 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html lang="en" className={cn("font-sans", geist.variable)} suppressHydrationWarning>
       <body className={`${inter.variable}   bg-background`}>
-         <Header />
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 
 
-import PropertyCard from "@/components/PropertyCard";
+import PropertyCard from "@/components/home/PropertyCard";
 import { getProperties } from "@/lib/api";
 
 

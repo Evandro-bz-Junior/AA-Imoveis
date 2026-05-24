@@ -4,34 +4,38 @@ import { Property } from "@/types/property"
 
 
 type PropertyCardProps = {
-  property: Property
+    property: Property
 }
 
-export default function PropertyCard({ property }: PropertyCardProps){
-      const {
-    id,
-    title,
-    price,
-    city,
-    state,
-    neighborhood,
-    bedrooms,
-    bathrooms,
-    parking,
-    images
-  } = property
-  
+export default function PropertyCard({ property }: PropertyCardProps) {
+    const {
+        id,
+        title,
+        price,
+        city,
+        state,
+        neighborhood,
+        bedrooms,
+        bathrooms,
+        parking,
+        images
+    } = property
+
     return (
-        <div className="card w-full lg:w-[400] h-full bg-background rounded-2xl overflow-hidden shadow-md">
-            <div className="imageArea relative">
-                <Image src={images[0]} alt={title} width={400} height={300} className="w-full h-full object-cover" />
+        <div className="card w-full lg:w-100  h-116 bg-background rounded-2xl overflow-hidden shadow-md flex flex-col">
+            <div className="imageArea relative h-65 w-full shrink-0">
+                <Image src={images[0]} alt={title} fill
+                    className="object-cover" />
                 <div className="absolute bottom-3 left-3 flex items-center gap-1 bg-black/40 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full">
                     <img src="/images/MapPin.svg" alt="Localização" className="w-3 h-3" />
                     <span>{neighborhood}, {city}, {state}</span>
                 </div>
             </div>
-            <div className="infoArea p-6 flex flex-col justify-between gap-4 h-[200]">
-                <h6 className="text-2xl font-medium">{price}</h6>
+            <div className="infoArea p-6 flex flex-col flex-1 justify-between gap-4">
+                <h6 className="text-2xl font-medium">{Number(price).toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                })}</h6>
                 <span className="text-text2 line-clamp-2 flex-1">{title}</span>
                 <div className="details flex justify-between items-center gap-4 border-t border-gray-300 pt-4 mt-auto">
                     <div className="flex gap-3">

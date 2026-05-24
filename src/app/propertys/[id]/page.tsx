@@ -1,6 +1,7 @@
 import { getProperties } from "@/lib/api";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import PropertyCarousel from "@/components/PropertyCarousel"
 
 export default async function DetalhesImovel({
     params,
@@ -20,19 +21,14 @@ export default async function DetalhesImovel({
     }
     return (
         <main className="container mx-auto py-20 px-4 md:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2  gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-4">
 
-                <div className="relative h-75 md:h-100   rounded-2xl overflow-hidden shadow-lg">
-                    <Image
-                        src={property.images[0]}
-                        alt={property.title}
-                        fill
-                        className="object-cover"
-                        priority
-                    />
+                <div className="rounded-2xl overflow-hidden shadow-lg ">
+                    
+                    <PropertyCarousel images={property.images} />
                 </div>
 
-                <div className="flex flex-col gap-6  w-full">
+                <div className="flex flex-col gap-6  flex-1 min-w-0">
                     <div className="  w-full">
                         <h1 className="text-4xl font-bold text-text2 md:w-full">{property.title}</h1>
                         <span className="text-primary font-bold text-sm uppercase tracking-wider ">{property.neighborhood}, {property.city}, {property.state}</span>
@@ -40,7 +36,7 @@ export default async function DetalhesImovel({
 
                     <p className="text-3xl font-medium text-text2">{property.price}</p>
 
-                    <p className="text-gray-600 leading-relaxed border-t pt-6">
+                    <p className="text-gray-600 leading-relaxed border-t pt-6 wrap-break-word md:line-clamp-3 ">
                         {property.description}
                     </p>
 
