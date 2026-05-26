@@ -15,7 +15,7 @@ export default function EditPropertyPage() {
 
     const [loading, setLoading] = useState(true)
 
-    const [files, setFiles] = useState<(File | string)[]>([])
+    const [files, setFiles] = useState<File[]>([])
 
     const [form, setForm] = useState({
         title: "",
