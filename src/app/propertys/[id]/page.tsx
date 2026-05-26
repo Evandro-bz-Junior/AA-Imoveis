@@ -1,6 +1,5 @@
 import { getProperties } from "@/lib/api";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import PropertyCarousel from "@/components/PropertyCarousel"
 
 export default async function DetalhesImovel({

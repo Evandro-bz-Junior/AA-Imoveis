@@ -33,13 +33,13 @@ export default function Header() {
                             <Link href="/" className="text-text2">Home</Link>
                         </li>
                         <li>
-                            <Link href="/#properties" className="text-text2">Imoveis</Link>
+                            <Link href={pathname === "/" ? "#properties" : "/#properties"} className="text-text2">Imoveis</Link>
                         </li>
                         <li>
-                            <Link href="/#about" className="text-text2">Sobre</Link>
+                            <Link href={pathname === "/" ? "#about" : "/#about"} className="text-text2">Sobre</Link>
                         </li>
                         <li>
-                            <Link href="/#contact" className="text-text2">Contato</Link>
+                            <Link href={pathname === "/" ? "#contact" : "/#contact"} className="text-text2">Contato</Link>
                         </li>
                     </ul>
                 </nav>

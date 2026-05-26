@@ -1,7 +1,6 @@
 "use client";
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import React from 'react';
 
 export default function Footer() {
     const pathname = usePathname();
@@ -26,13 +25,13 @@ export default function Footer() {
                                 <a href="/" className="hover:underline text-text2">Home</a>
                             </li>
                             <li>
-                                <a href="/#properties" className="hover:underline text-text2">Imoveis</a>
+                                <a href={pathname === "/" ? "#properties" : "/#properties"} className="hover:underline text-text2">Imoveis</a>
                             </li>
                             <li>
-                                <a href="/#about" className="hover:underline text-text2">Sobre</a>
+                                <a href={pathname === "/" ? "#about" : "/#about"} className="hover:underline text-text2">Sobre</a>
                             </li>
                             <li>
-                                <a href="/#contact" className="hover:underline text-text2">Contato</a>
+                                <a href={pathname === "/" ? "#contact" : "/#contact"} className="hover:underline text-text2">Contato</a>
                             </li>
                         </ul>
                     </div>

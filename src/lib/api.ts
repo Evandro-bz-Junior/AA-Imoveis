@@ -1,9 +1,6 @@
-import { properties } from "@/data/properties"
-import { supabase } from "./supabase";
+ import { supabase } from "./supabase";
 
-/* export async function getProperties() {
-    return properties
-} */
+
 
 export async function getProperties() {
     const { data, error } = await supabase
@@ -18,8 +15,4 @@ export async function getProperties() {
 
     return data;
 }
-
-export async function getPropertyById(id: number | string) {
-    return properties.find((p) => p.id === id)
-}
-
+ 
