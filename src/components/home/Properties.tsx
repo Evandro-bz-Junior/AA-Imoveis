@@ -1,4 +1,4 @@
-
+export const dynamic = "force-dynamic"
 
 import PropertyCard from "@/components/home/PropertyCard";
 import { getProperties } from "@/lib/api";

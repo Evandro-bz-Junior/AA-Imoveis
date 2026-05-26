@@ -1,5 +1,5 @@
 "use client"
-
+export const dynamic = "force-dynamic"
 import { getProperties } from "@/lib/api"
 import { supabase } from "@/lib/supabase"
 import { deleteProperty } from "@/lib/deleteProperty"
