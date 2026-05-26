@@ -73,12 +73,13 @@ export default function NewProperty() {
                 alert("Erro ao criar imóvel");
                 return;
             }
-
             const imageUrls = await Promise.all(
-                files.map((file) =>
-                    uploadImage(file, data.id)
-                )
-            );
+                files
+                    .filter((file): file is File => file instanceof File)
+                    .map((file) =>
+                        uploadImage(file, data.id)
+                    )
+            )
 
             const { error: updateError } = await supabase
                 .from("properties")
@@ -99,7 +100,7 @@ export default function NewProperty() {
         }
     }
 
-    const [files, setFiles] = useState<File[]>([]);
+    const [files, setFiles] = useState<(File | string)[]>([])
 
 
 

@@ -3,8 +3,10 @@
 import Image from "next/image"
 
 interface UploadImagesProps {
-    files: File[]
-    setFiles: React.Dispatch<React.SetStateAction<File[]>>
+    files: (File | string)[]
+    setFiles: React.Dispatch<
+        React.SetStateAction<(File | string)[]>
+    >
 }
 
 export default function UploadImages({
