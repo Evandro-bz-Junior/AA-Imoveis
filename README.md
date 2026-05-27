@@ -139,8 +139,6 @@ aa-imoveis/
 │   │       ├── button.tsx
 │   │       └── sheet.tsx
 │   │
-│   ├── data/
-│   │   └── properties.ts           # Dados mock/seed de imóveis
 │   │
 │   ├── lib/                        # Utilidades e funções auxiliares
 │   │   ├── api.ts                  # Chamadas à API Supabase
