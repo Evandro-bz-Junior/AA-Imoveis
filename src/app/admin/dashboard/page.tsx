@@ -123,7 +123,7 @@ export default function Dashboard() {
                                         <span className="text-sm text-gray-500  ">{item.bathrooms}
                                         </span>
 
-                                        <img src="/images/carIcon.svg" alt="Vagas de Garagem" className="w-4 h-4" />
+                                        <img src="/images/CarIcon.svg" alt="Vagas de Garagem" className="w-4 h-4" />
                                         <span className="text-sm text-gray-500  "> {item.parking}
                                         </span>
                                     </div>
